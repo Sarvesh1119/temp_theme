@@ -1,0 +1,28 @@
+{%- for setting in section.settings -%}
+    {%- case setting.announcement1 -%}
+        <h3>{{setting.announcement1}}</h3>
+    {%- endcase -%}
+{%- endfor -%}
+{% schema %} 
+{
+    "name": "announcement-bar",
+    "settings":[
+        {
+            "type": "text",
+            "id": "announcement1",
+            "label": "Announcement text - 1",
+            "default": "Big Billion days"
+        },
+        {
+            "type": "text",
+            "id": "announcement2",
+            "label": "Announcement text - 2",
+            "label": "Great Indian Sale"
+        }
+    ],
+    "presets": [
+        {
+        "name": "announcement-bar"
+        }
+    ]
+}
